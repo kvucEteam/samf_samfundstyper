@@ -1,0 +1,49 @@
+{
+    "heading": "Samfundstyper",
+    "instruction": "instruction tekst",
+    "explanation": "explanation tekst",
+    "category": [
+        {
+            "heading": "Kategorioverskrift 1",
+            "period": [
+                {
+                    "type": "text",
+                    "text": {
+                        "attr": {"id": "id_0", "class": "textWrap cardContent"},
+                        "text": "Dropzone: 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, est in feugiat convallis, magna risus sodales neque, sed lobortis sapien justo et erat."
+                    },
+                    "correctDropzoneNum": [1],
+                    "feedback": {
+                        "posetive": "Posetive feedback 1",
+                        "negative": "Negative feedback 1"
+                    }
+                },
+                {
+                    "type": "img",
+                    "img": {
+                        "attr": {"id": "id_1", "class": "imgWrap cardContent"},
+                        "imgSrc": "img/dummy_700x394_16by9.png"
+                    },
+                    "correctDropzoneNum": [1,2],
+                    "feedback": {
+                        "posetive": "Posetive feedback 2",
+                        "negative": "Negative feedback 2"
+                    }
+                },
+                {
+                    "type": "card",
+                    "card": {
+                        "attr": {"id": "id_3", "class": "cardWrap cardContent"},
+                        "imgSrc": "img/dummy_700x394_16by9.png",
+                        "text": "Dropzone: 2 + 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, est in feugiat convallis, magna risus sodales neque, sed lobortis sapien justo et erat."
+                    },
+                    "correctDropzoneNum": [2,3],
+                    "feedback": {
+                        "posetive": "Posetive feedback 3",
+                        "negative": "Negative feedback 3"
+                    }
+                }
+            ]
+        }
+    ]
+}

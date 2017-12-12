@@ -1,0 +1,123 @@
+{
+    "heading": "Samfundstyper",
+    "instruction": "instruction tekst",
+    "explanation": "explanation tekst",
+    "samfundstype": [
+        {
+            "heading": "Samfundstype 1"
+        },
+        {
+            "heading": "Samfundstype 2"
+        },
+        {
+            "heading": "Samfundstype 3"
+        }
+    ],
+    "category": [
+        {
+            "heading": "Kategorioverskrift 1",
+            "samfundstype": [
+                {
+                    "type": "card",
+                    "card": {
+                        "attr": {"class": "cardWrap cardContent"},
+                        "imgSrc": "img/dummy_700x394_16by9.png",
+                        "heading": "Cardoverskrift (1.0)",
+                        "text": "(1.0) Dropzone: 1+2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, est in feugiat convallis, magna risus sodales neque, sed lobortis sapien justo et erat."
+                    },
+                    "correctColumn": [0,1]
+                },
+                {
+                    "type": "card",
+                    "card": {
+                        "attr": {"class": "cardWrap cardContent"},
+                        "imgSrc": "img/dummy_700x394_16by9.png",
+                        "heading": "Cardoverskrift (1.1)",
+                        "text": "(1.1) Dropzone: 1+2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, est in feugiat convallis, magna risus sodales neque, sed lobortis sapien justo et erat."
+                    },
+                    "correctColumn": [0,1]
+                },
+                {
+                    "type": "card",
+                    "card": {
+                        "attr": {"class": "cardWrap cardContent"},
+                        "imgSrc": "img/dummy_700x394_16by9.png",
+                        "heading": "Cardoverskrift (1.2)",
+                        "text": "(1.2) Dropzone: 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, est in feugiat convallis, magna risus sodales neque, sed lobortis sapien justo et erat."
+                    },
+                    "correctColumn": [2]
+                }
+            ]
+        },
+        {
+            "heading": "Kategorioverskrift 2",
+            "samfundstype": [
+                {
+                    "type": "card",
+                    "card": {
+                        "attr": {"class": "cardWrap cardContent"},
+                        "imgSrc": "img/dummy_700x394_16by9.png",
+                        "heading": "Cardoverskrift (2.0)",
+                        "text": "(2.0) Dropzone: 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, est in feugiat convallis, magna risus sodales neque, sed lobortis sapien justo et erat."
+                    },
+                    "correctColumn": [0]
+                },
+                {
+                    "type": "card",
+                    "card": {
+                        "attr": {"class": "cardWrap cardContent"},
+                        "imgSrc": "img/dummy_700x394_16by9.png",
+                        "heading": "Cardoverskrift (2.1)",
+                        "text": "(2.1) Dropzone: 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, est in feugiat convallis, magna risus sodales neque, sed lobortis sapien justo et erat."
+                    },
+                    "correctColumn": [1]
+                },
+                {
+                    "type": "card",
+                    "card": {
+                        "attr": {"class": "cardWrap cardContent"},
+                        "imgSrc": "img/dummy_700x394_16by9.png",
+                        "heading": "Cardoverskrift (2.2)",
+                        "text": "(2.2) Dropzone: 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, est in feugiat convallis, magna risus sodales neque, sed lobortis sapien justo et erat."
+                    },
+                    "correctColumn": [2]
+                }
+            ]
+        },
+        {
+            "heading": "Kategorioverskrift 3",
+            "samfundstype": [
+                {
+                    "type": "card",
+                    "card": {
+                        "attr": {"class": "cardWrap cardContent"},
+                        "imgSrc": "img/dummy_700x394_16by9.png",
+                        "heading": "Cardoverskrift (3.0)",
+                        "text": "(3.0) Dropzone: 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, est in feugiat convallis, magna risus sodales neque, sed lobortis sapien justo et erat."
+                    },
+                    "correctColumn": [0]
+                },
+                {
+                    "type": "card",
+                    "card": {
+                        "attr": {"class": "cardWrap cardContent"},
+                        "imgSrc": "img/dummy_700x394_16by9.png",
+                        "heading": "Cardoverskrift (3.1)",
+                        "text": "(3.1) Dropzone: 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, est in feugiat convallis, magna risus sodales neque, sed lobortis sapien justo et erat."
+                    },
+                    "correctColumn": [1]
+                },
+                {
+                    "type": "card",
+                    "card": {
+                        "attr": {"class": "cardWrap cardContent"},
+                        "imgSrc": "img/dummy_700x394_16by9.png",
+                        "heading": "Cardoverskrift (3.2)",
+                        "text": "(3.2) Dropzone: 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, est in feugiat convallis, magna risus sodales neque, sed lobortis sapien justo et erat."
+                    },
+                    "correctColumn": [2]
+                }
+            ]
+        }
+    ]
+}
