@@ -20,6 +20,7 @@
 	display: none;
 	position: relative;
 	top: 0px;
+	padding-top: 2.5%;  /* <----- BUGFIX: Virker i Firefox */
 }
 
 .active {
@@ -44,7 +45,7 @@
     margin-right: 13px;*/
     margin-left: 1.6%;
     margin-right: 1.6%;
-    margin-top: 2.5%;
+    /*margin-top: 2.5%;*/  /* <----- BUGFIX: Virker IKKE i Firefox */
     padding: 10px;
     background-color: #e7e6e2;
     /*border: 1px solid #e7e6e2;*/
@@ -93,9 +94,9 @@
 
 .samfundstypeZone {
 	width: 100%;
-	border-left: 1px dotted #999;
-	border-right: 1px dotted #999;
-	border-bottom: 1px dotted #999;
+	border-left: 1px dashed #999;
+	border-right: 1px dashed #999;
+	border-bottom: 1px dashed #999;
 	border-bottom-left-radius: 6px;
 	border-bottom-right-radius: 6px;
 }
@@ -115,7 +116,7 @@
 	padding: 10px;
 	margin-top: 0px;
 	margin-bottom: 0px;
-	background-color: #e7e6e2;
+	background-color: #fff;
 	border: 1px solid #cac9c6;
 	border-top-left-radius: 6px;
 	border-top-right-radius: 6px;
@@ -132,11 +133,46 @@
 
 .miniCard {
 	width: 100%;
+	margin: 0px;   /* Dette gøres pga pop-up animation i template2 */
+	overflow: auto;
 }
 
-/*******************************************************************************
+.miniCardText{
+	display: none;
+}
+
+.dropShadow {
+	box-shadow: 0px 0px 15px #aaa;
+}
+
+/*#UserMsgBox_video {*/
+#UserMsgBox {
+    background-color: #FFF;
+    width: 100%;
+    max-height: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    padding: 0px;
+    overflow: hidden;
+    overflow-x: auto;
+}
+
+.CloseClass {
+	position: absolute;
+	right: 20px;
+	top: 20px;
+}
+
+/*******************************************************************************   
 						Table-styling
 *******************************************************************************/
+
+table, tbody, tr, td {
+	position: relative;
+}
 
 table#template2_tableView{
 	border-collapse: collapse;
@@ -155,3 +191,25 @@ table#template2_tableView{
 #template2_tableView td {
 	padding: 10px 17px 10px 10px;
 }
+
+
+/*******************************************************************************
+						Media queries
+*******************************************************************************/
+
+@media (max-width: 767px) {
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
