@@ -74,8 +74,9 @@
 	/*border-radius: 6px;*/
 }
 
-.objText {
-	/*padding: 10px 10px 0px 10px;*/
+.objText h4 {
+	margin-top: 10px;
+	margin-bottom: 5px;
 }
 /*
 .ui-sortable-handle {
@@ -131,7 +132,7 @@
 	margin-bottom: 10px;
 }
 
-.miniCard {
+.miniCard, .miniCard_large {
 	width: 100%;
 	margin: 0px;   /* Dette gøres pga pop-up animation i template2 */
 	overflow: auto;
@@ -154,17 +155,65 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
+/*
     padding: 0px;
     overflow: hidden;
     overflow-x: auto;
+ */   
 }
 
 .CloseClass {
+/*
 	position: absolute;
 	right: 20px;
 	top: 20px;
+*/	
 }
+
+
+.MsgBox_bgr_card {
+    background-color: rgba(0,0,0,.5);
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+#UserMsgBox_card {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    top: 20%;
+    line-height: 1.5em;
+    position: absolute;
+    max-height: 70%;
+    /*overflow: auto;*/
+    cursor: pointer;
+    max-width: 720px;
+    left: 0;
+    right: 0;
+
+    max-height: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.CloseClass_card {
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    z-index: 1000;
+    font-size: 1.8em;
+    color: rgba(255,255,255,0.8);
+}
+
+#startHint {
+	margin-top: 20px;
+	margin-bottom: 0px;
+}
+
 
 /*******************************************************************************   
 						Table-styling
@@ -181,7 +230,7 @@ table#template2_tableView{
 }
 
 #template2_tableView td, #template2_tableView th {
-	border: 1px solid #ddd;
+	/*border: 1px solid #ddd;*/
 }
 
  #template2_tableView th {
@@ -189,7 +238,16 @@ table#template2_tableView{
  }
 
 #template2_tableView td {
-	padding: 10px 17px 10px 10px;
+	padding: 5px 12px 5px 5px;
+}
+
+#template2_tableView th:first-child {
+	padding-left: 10px; 	/* Denne rummer ordet "kategorier" - måske skal dette ord helt fjernes */
+}
+
+#template2_tableView td:first-child {
+	vertical-align: top;
+	font-weight: 700;
 }
 
 

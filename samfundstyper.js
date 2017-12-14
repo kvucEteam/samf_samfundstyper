@@ -217,11 +217,13 @@ function template1() {
 // $('#interface').append(makeTable(['a', 'b', 'c'], [['(0,0)','(0,1)','(0,2)'], ['(1,0)','(1,1)','(1,2)'],['(2,0)','(2,1)','(2,2)'],['(3,0)','(3,1)','(3,2)']]));
 function template2() {
 
+	window.template2_called = true;
+
 	console.log('template2 - jsonData: ' + JSON.stringify(jsonData, null, 4));
 
 	// var headerArr = ['a', 'b', 'c'];
 	// var contentArr = [['(0,0)','(0,1)','(0,2)'], ['(1,0)','(1,1)','(1,2)'],['(2,0)','(2,1)','(2,2)'],['(3,0)','(3,1)','(3,2)']];
-	var headerArr = ['Kategorier'];
+	var headerArr = [''];
 	for (var n in jsonData.samfundstype) {
 		headerArr.push(jsonData.samfundstype[n].heading);
 	}
@@ -261,7 +263,7 @@ function makeTable(attrObj, headerArr, contentArr) {
 	HTML += 	'<thead>';
 	HTML += 		'<tr>';
 					for (var n in headerArr) {
-	HTML += 			'<th>'+headerArr[n]+'</th>';
+	HTML += 			'<th><h4>'+headerArr[n]+'</h4></th>';
 					}
 	HTML += 		'</tr>';
 	HTML += 	'<thead>';
@@ -319,10 +321,12 @@ function setHeight(selectorArr, ratio) {
 }
 
 
+// setHeight2(['.samfundstypeZone', '.catRow .cardContent']);
 function setHeight2(selectorArr) {
-	console.log('setHeight2 - CALLED');
+	console.log('setHeight2 - CALLED - selectorArr[0]: ' + selectorArr[0] + ', $(selectorArr[0]).length: ' + $(selectorArr[0]).length);
 
-	if ($(selectorArr[0]).length > 0) { // Only if the first element is present, then setHeight2...
+	// if ($(selectorArr[0]).length > 0) { // Only if the first element is present, then setHeight2...
+	if ((typeof(template2_called)==='undefined')) {
 
 		var timer = setInterval(function(){ 
 			console.log('setHeight2 - A0');
@@ -365,6 +369,10 @@ function setHeight2(selectorArr) {
 
 				$('#btnWrap').fadeIn(200);
 				$('.footerCopywrite').fadeIn(200);
+
+				// if ($('#microhint_target').length) {
+				// 	microhint($('#microhint_target'), '<img class="img-responsive" src="img/sorterhint_animatedGIF_done.gif">', false, '#000');   // sorterhint_animatedGIF_done.gif
+				// }
 
 			}
 		}, 100);
@@ -588,46 +596,61 @@ function checkAnswer_callBack() {
 
 
 
+function UserMsgBox_card(TargetSelector, UserMsg) {
+    console.log("bring up the box!");
+
+    var HTML = "<div class = 'MsgBox_bgr_card'><div id='UserMsgBox_card'>";
+    HTML += '<span class="CloseClass_card right glyphicon glyphicon-remove"></span><span class="clear"></span>';
+    HTML += UserMsg;
+    HTML += "</div> </div>";
+    // $ <--------------------------------------------   UDKOMMENTERET AF THAN 03-02-2017
+    $(TargetSelector).prepend(HTML);
+
+    $(".MsgBox_bgr_card").fadeIn("slow");
+
+    $(".MsgBox_bgr_card").click(function() {
+        $(".MsgBox_bgr_card").fadeOut(200, function() {
+            $(this).remove();
+        });
+    });
+    $("#UserMsgBox_card").click(function() {
+        $(".MsgBox_bgr_card").fadeOut(200, function() {
+            $(this).remove();
+        });
+       //  $('.CloseClass_card').trigger('click');
+    });
+    $(document).keyup(function(e) {
+        if (e.keyCode == 27) { // escape key maps to keycode `27`
+            $(".MsgBox_bgr_card").fadeOut(200, function() {
+                $(this).remove();
+            });
+        }
+    });
+}
+
+
+
 $(document).on('click touchend', '.miniCard', function(event) {
 
-	// //##############################################################################
-	// //			ANIMATION SOM SKAL VISES TIL TLY
-	// //##############################################################################
 	
-	// // Remove all inline style on all miniCards...
-	// // ===========================================
-	// $('.miniCard').removeAttr( "style" );  
-	// $('.miniCardText').removeAttr( "style" );  
-	// $('.miniCard').removeClass('dropShadow');
-
-	// // Make the minicard absolute in positiob and give it same dimensions as before...
-	// // ===========================================
-	// var h = $(this).parent().innerHeight() - parseInt($(this).parent().css('padding-top').replace('px', '')) - parseInt($(this).parent().css('padding-bottom').replace('px', ''));
-	// var w = $(this).parent().innerWidth() - parseInt($(this).parent().css('padding-left').replace('px', '')) - parseInt($(this).parent().css('padding-right').replace('px', ''));
-	// var t = parseInt($(this).parent().css('padding-top').replace('px', ''));
-	// console.log('miniCard - CLICK - t: ' + t);
-	// $(this).css({position: 'absolute', top: t+'px', width: w+'px', height: h+'px', 'z-index': 1});  
-
-	// // Animate card:
-	// // ===========================================
-	// $('.miniCardText', this).css({display: 'inline-block'});  // show 
-	// $(this).addClass('dropShadow');
-	// w = w*1.5;
-	// h = h*1.5;
-	// $( this ).animate({ width: w+'px', height: h+'px' }, "slow" );		
-
-	// //##############################################################################		
-
-
 	//##############################################################################
 	//		UserMsgBox løsning, som virker uanset card-tekst-størrelse...
 	//##############################################################################
 	
 	// UserMsgBox_xclick("body", '<div id="cloneTarget"></div>');
-	UserMsgBox("body", '<div id="cloneTarget"></div>');
-	$('#cloneTarget').hide().fadeIn(400);
-	$('#cloneTarget').html($(this).clone());
-	$('#cloneTarget .miniCardText').css({display: 'inline-block'});
+
+
+	// UserMsgBox("body", '<div id="cloneTarget"></div>');
+	// $('#cloneTarget').hide().fadeIn(400);
+	// $('#cloneTarget').html($(this).clone());
+	// $('#cloneTarget .miniCardText').css({display: 'inline-block'});
+
+
+	UserMsgBox_card("body", '<div id="dummyContainer"></div>');
+	$('#UserMsgBox_card').hide().fadeIn(400);
+	$('#dummyContainer').html($(this).clone().addClass('miniCard_large').removeClass('miniCard'));
+	$('#UserMsgBox_card .miniCardText').css({display: 'inline-block'});
+
 
 });
 
@@ -890,6 +913,9 @@ $(document).ready(function() {
 	randomizeCards();
 
 	$('#interface').html(main());
+
+	$('#catRow_0').addClass('microhint_target');  // Insert 
+	microhint($('.microhint_target'), '<img class="img-responsive" src="img/sorterhint_animatedGIF_done.gif"> <p id="startHint">Sorter de grå kort, så de passer til den rette kategori.</p>', false, '#000'); 
 
 	setSortableRow('catRow_0');
 
