@@ -50,6 +50,7 @@
     background-color: #e7e6e2;
     /*border: 1px solid #e7e6e2;*/
     border-radius: 6px;
+    cursor: pointer;
 }
 
 .activeCategory, .inactiveCategory{
@@ -124,7 +125,8 @@
 }
 
 #btnWrap {
-	margin-top: 30px;
+	/*margin-top: 30px;*/
+	margin-top: 15px;
 	margin-left: 0.6%;
 }
 
@@ -198,6 +200,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    /*z-index: 100;*/
 }
 
 .CloseClass_card {

@@ -16,6 +16,10 @@
     "category": [
         {
             "heading": "Dominerende erhverv",
+            "feedback": {
+                "posetive": "Hvad og hvordan man producerer har stor betydning. Overgangen, fra det traditionelle landbrugssamfund til det senmoderne servicesamfund, påvirker og hænger sammen med en lang række andre forhold i samfundet, som du ser i de næste opgaver.",
+                "negative": ""
+            },
             "samfundstype": [
                 {
                     "type": "card",
@@ -23,7 +27,7 @@
                         "attr": {"class": "cardWrap cardContent"},
                         "imgSrc": "img/erhverv_1.jpg",
                         "heading": "Primære erhverv ",
-                        "text": "<p>Størstedelen af arbejdsstyrken er beskæftiget i landbrug.</p>"
+                        "text": "<p>Størstedelen af arbejdsstyrken er beskæftiget i landbrug.<p></p>Primære erhverv er en fællesbetegnelse for landbrug, skovbrug, jagt og fiskeri. Altså de erhverv som direkte udnytter naturresurserne.<p></p>De fleste bor i landsbyer, hvor de er gensidigt afhængige af hinanden i produktionen og som hinandens sikkerhedsnet. Selvforsyning og bytteøkonomi er udbredt.</p>"
                     },
                     "correctColumn": [0]
                 },
@@ -33,7 +37,7 @@
                         "attr": {"class": "cardWrap cardContent"},
                         "imgSrc": "img/erhverv_2.jpg",
                         "heading": "Sekundære erhverv",
-                        "text": "<p>En stadig større del af arbejdsstyrken er beskæftiget i industriel produktion.</p>"
+                        "text": "<p>Sekundære erhverv betegner erhverv, der forarbejder råvarer (fra de primære erhverv) til færdigvarer. Det omfatter både industri, håndværk, byggeri og anlægsvirksomhed.<p></p>Industrialiseringen og urbaniseringen gør, at en kraftigt stigende andel af befolkningen både bor og arbejder i byer.<p></p>Markedsøkonomi med handel og pengeøkonomi præger den kraftige stigning i produktionen.</p>"
                     },
                     "correctColumn": [1]
                 },
@@ -43,7 +47,7 @@
                         "attr": {"class": "cardWrap cardContent"},
                         "imgSrc": "img/erhverv_3.jpg",
                         "heading": "Tertiære erhverv ",
-                        "text": "<p>Størstedelen af arbejdsstyrken arbejder i serviceerhverv – fx handel, bank, sundhed, uddannelse og forskning.</p>"
+                        "text": "<p>Størstedelen af arbejdsstyrken arbejder i tertiære erhverv, også kaldet serviceerhverv.<p></p>Tertiære erhverv er for eksempel al handel (inklusiv hotel og restaurantbranchen), transport, administration, rådgivning, design, forskning, finans og services som skole, sygehus og køb og salg af ejendom.<p></p>De tertiære erhverv bliver dominerende i den private sektor og omfatter næsten alle ansatte i den offentlige sektor. Den offentlige sektor har i de mange lande fået en stor og aktiv rolle i samfundet.</p>"
                     },
                     "correctColumn": [2]
                 }
@@ -51,14 +55,18 @@
         },
         {
             "heading": "Organisering af arbejdet og teknologisk niveau",
+            "feedback": {
+                "posetive": "Specielt udviklingen i transportteknologi og kommunikationsteknologi er væsentlig i overgangen fra det traditionelle til det senmoderne samfund. Internettet har gjort os uafhængige af tid og sted. Vi kan gå online når som helst og hvor som helst. Afstande betyder mindre.",
+                "negative": ""
+            },
             "samfundstype": [
                 {
                     "type": "card",
                     "card": {
                         "attr": {"class": "cardWrap cardContent"},
                         "imgSrc": "img/organisering1.jpg",
-                        "heading": "Klassisk håndværk ",
-                        "text": "<p>Den enkelte bondefamilie er i høj grad selvforsynende. Udbyttet varierer meget, da det teknologiske niveau fortsat er lavt – fx foregår høsten ved hjælp af en le - og dårligt vejr kan nedsætte høstudbyttet, så sult og sygdom er en konstant trussel.</p><p>Tid og rum er ikke adskilt. Man følger døgnets og årstidernes rytme.</p>"
+                        "heading": "Håndkraft, håndværk og selvforsyning",
+                        "text": "</p>Den enkelte bondefamilie er i høj grad selvforsynende. Udbyttet varierer meget, da det teknologiske niveau fortsat er lavt – fx foregår høsten ved hjælp af en le - og dårligt vejr kan nedsætte høstudbyttet, så sult og sygdom er en konstant trussel.<p></p>Tid og rum er ikke adskilt. Man følger døgnets og årstidernes rytme.</p>"
                     },
                     "correctColumn": [0]
                 },
@@ -68,7 +76,7 @@
                         "attr": {"class": "cardWrap cardContent"},
                         "imgSrc": "img/organisering2.jpg",
                         "heading": "Hierarki og specialisering ",
-                        "text": "<p>Landbruget oplever en stigende mekanisering og den overskydende arbejdskraft søger til byen og bliver nu typisk ansat på fabrikker. Nye teknologier som fx samlebåndet gør det muligt at opsplitte produktionen, så arbejderen varetager en specialiseret del af produktionen. Dette øger produktiviteten, men arbejdet bliver mere ensformigt.</p><p>Gradvis adskillelse af tid og rum. I slutningen af perioden får flere og flere telefoner, biler og tv.</p>"
+                        "text": "<p>Landbruget oplever en stigende mekanisering, og den overskydende arbejdskraft søger til byen og bliver nu typisk ansat på fabrikker.<p></p>Nye teknologier, som fx samlebåndet, gør det muligt at opsplitte produktionen, så arbejderen varetager en specialiseret del af produktionen. Dette øger produktiviteten, men arbejdet bliver mere ensformigt.<p></p>Gradvis adskillelse af tid og rum. I slutningen af perioden får flere og flere telefoner, biler og tv.</p>"
                     },
                     "correctColumn": [1]
                 },
@@ -78,7 +86,7 @@
                         "attr": {"class": "cardWrap cardContent"},
                         "imgSrc": "img/organisering3.jpg",
                         "heading": "Netværk",
-                        "text": "<p>Computerteknologi skaber globale produktionsnetværk. En stor del af industriproduktionen er enten outsourcet eller automatiseret.</p><p>Samfundet er højteknologisk og de fleste jobfunktioner kræver en god uddannelse og mange arbejder projektorienteret. På grund af computerteknologi kan mange arbejde hjemmefra og på tværs af landegrænser.</p><p>Produktionen er globaliseret, og typisk udvikles og designes produktet i Danmark, mens det fysiske produkt produceres i lavtlønslande. Samlet set er der sket en klar adskillelse mellem tid og rum.</p>"
+                        "text": "<p>Computerteknologi skaber globale produktionsnetværk. En stor del af industriproduktionen er enten outsourcet eller automatiseret.<p></p>Samfundet er højteknologisk. De fleste jobfunktioner kræver en god uddannelse, og mange arbejder projektorienteret. På grund af computerteknologi kan mange arbejde hjemmefra og på tværs af landegrænser.<p></p>Produktionen er globaliseret, og typisk udvikles og designes produktet i Danmark, mens det fysiske produkt produceres i lavtlønslande. Samlet set er der sket en klar adskillelse mellem tid og rum. </p>"
                     },
                     "correctColumn": [2]
                 }
@@ -86,6 +94,10 @@
         },
         {
             "heading": "Dominerende familietype",
+            "feedback": {
+                "posetive": "I det traditionelle (mangel-)samfund er familiemedlemmerne afhængige af hinanden i nødvendige arbejdsfællesskaber. Børnene bruges også som arbejdskraft. Familierne bliver gradvist tømt for tidligere nødvendige funktioner. Ligestilling, individualisering og globalisering åbner op for flere forskellige familietyper, der mere bygger på følelser og lyst.",
+                "negative": ""
+            },
             "samfundstype": [
                 {
                     "type": "card",
@@ -93,7 +105,7 @@
                         "attr": {"class": "cardWrap cardContent"},
                         "imgSrc": "img/familietype1.jpg",
                         "heading": "Slægt- og storfamilien",
-                        "text": "<p>Manden går på arbejde. Kvinden går hjemme og passer børnene samt sørger for husarbejdet. Kvinden er økonomisk afhængig af manden. Måske bor bedsteforældrene også i huset. Skilsmisser forekommer yderst sjældent.</p> "
+                        "text": "<p>Manden går på arbejde. Kvinden går hjemme og passer børnene samt sørger for husarbejdet. Børnene fungerer også som arbejdskraft i dette patriarkalske samfund. Mændene står over kvinderne i henholdsvis familien, slægten, lokalsamfundet og nationen. </p><p>Kvinden er økonomisk afhængig af manden. Måske bor bedsteforældrene også i huset. Skilsmisser forekommer yderst sjældent</p>"
                     },
                     "correctColumn": [0]
                 },
@@ -103,7 +115,7 @@
                         "attr": {"class": "cardWrap cardContent"},
                         "imgSrc": "img/familietype2.jpg",
                         "heading": "Klassisk kernefamilie",
-                        "text": "<p>Kvinden begynder at komme på arbejdsmarkedet, men kvinden står fortsat for husarbejdet. Kvinden bliver dermed mindre økonomisk afhængig af manden. Skilsmisser forekommer i stigende omfang.</p>"
+                        "text": "<p>Kvinden begynder at komme på arbejdsmarkedet og bliver dermed mindre økonomisk afhængig af manden.</p><p>Kvinden står fortsat for husarbejdet, og der er ret faste kønsroller.  </p><p>Men en økonomisk velstandsstigning og en begyndende aftraditionalisering medfører en stadig stigende kulturel og social ligestilling.</p><p>Skilsmisser forekommer således i stigende omfang.</p>"
                     },
                     "correctColumn": [1]
                 },
@@ -113,7 +125,7 @@
                         "attr": {"class": "cardWrap cardContent"},
                         "imgSrc": "img/familietype3.jpg",
                         "heading": "Forskellige familietyper",
-                        "text": "<p>De traditionelle kønsroller forsvinder da aftraditionaliseringen er gennemført. Kvinden er fuldt ud integreret på arbejdsmarkedet og dermed økonomisk uafhængig af manden.</p><p>Skilsmisser og sammenbragte familier ikke et særsyn. Singlekultur og regnbuefamilier også udbredt. De midlertidige lystfællesskaber udgør en betydelig del af hverdagslivet.</p>"
+                        "text": "<p>De traditionelle kønsroller forsvinder, da aftraditionaliseringen er gennemført. Kvinden er fuldt ud integreret på arbejdsmarkedet og dermed økonomisk uafhængig af manden.</p><p>Skilsmisser og sammenbragte familier ikke et særsyn. Singlekultur og regnbuefamilier er også udbredt. De midlertidige lystfællesskaber udgør en betydelig del af hverdagslivet.</p>"
                     },
                     "correctColumn": [2]
                 }
@@ -121,14 +133,18 @@
         },
         {
             "heading": "Dominerende socialisationsfaktorer",
+            "feedback": {
+                "posetive": "I det traditionelle samfund spiller den primære socialisation i familien den væsentligste rolle.  Gradvist forøges betydningen af den sekundære socialisation - og i det senmoderne samfund taler man således om en dobbeltsocialisation, idet individet nu lever sit liv i mange skiftende sociale arenaer.",
+                "negative": ""
+            },
             "samfundstype": [
                 {
                     "type": "card",
                     "card": {
                         "attr": {"class": "cardWrap cardContent"},
                         "imgSrc": "img/socialisation1.jpg",
-                        "heading": "Slægten og det lokale",
-                        "text": "<p>Den enkelte er ikke individualiseret, da individet er styret af traditioner og fællesskaber som familien/slægten og lokalsamfundet. Individet foretager dermed ikke egne valg, idet de valg man foretager er styret af lokalsamfundets normer og vaner. Der foregår således en primær socialisering.</p>"
+                        "heading": "Slægt og lokalsamfund",
+                        "text": "<p>Da individet er styret af traditioner og fællesskaber som familien/slægten og lokalsamfundet, lever den enkelte ikke et individualiseret liv.</p><p>Individet foretager dermed ikke egne valg, idet de valg, man foretager, er styret af lokalsamfundets normer og vaner. Der foregår således en stærk primær socialisering. Der er streng social kontrol, og bryder den enkelte samfundets normer, opretholdes normerne med sanktioner.</p>"
                     },
                     "correctColumn": [0]
                 },
@@ -138,7 +154,7 @@
                         "attr": {"class": "cardWrap cardContent"},
                         "imgSrc": "img/socialisation2.jpg",
                         "heading": "Forældre og nationalstaten",
-                        "text": "<p>Der begynder en aftraditionaliseringsproces, hvor tidligere normer og vaner gradvist spiller en mindre rolle i forhold til den måde man indretter sit liv på.</p><p>Sideløbende med aftraditionalisering sker der en individualiseringsproces, og individet skal dermed i stigende omfang reflektere over egne valg. Pasning af børn og de ældre varetages i stigende grad af vuggestuer, børnehaver, plejehjem mv.</p><p>Dermed sker der en gradvis udlejring af de sociale relationer. Der foregår således ikke kun en primær socialisering da den sekundære socialisering gradvist kommer til at spille en større rolle.</p>"
+                        "text": "<p>Der begynder en aftraditionaliseringsproces, hvor tidligere normer og vaner gradvist spiller en mindre rolle i forhold til den måde, man indretter sit liv på.</p><p>Sideløbende sker der en individualiseringsproces, og individet skal dermed i stigende omfang reflektere over egne valg. Pasning af børn og de ældre varetages i stigende grad af vuggestuer, plejehjem mv.</p><p>Dermed sker der en gradvis udlejring af de sociale relationer, og den sekundære socialisering kommer gradvist til at spille en større rolle.</p>"
                     },
                     "correctColumn": [1]
                 },
@@ -148,7 +164,7 @@
                         "attr": {"class": "cardWrap cardContent"},
                         "imgSrc": "img/socialisation3.jpg",
                         "heading": "Forældre, institutioner og medier",
-                        "text": "<p>Der er en høj grad af individualisering og en næsten fuldstændig aftraditionalisering af de oprindelige traditioner. Barnet gennemgår en dobbeltsocialisering, idet det både oplever en primær socialisering fra familien og venner, samt en sekundær socialisering fra institutioner og medier.</p><p>Der eksisterer dermed en høj grad af udlejring af de sociale relationer, da næsten alle børn tilbringer en stor del af dagen i institutioner. I familien er barnet unikt – i institutionen er man én blandt mange.</p><p>De mange institutioner er et eksempel på et udlejret  ekspertsystem. Ekspertsystemer findes i mange udgaver – fx hospitaler, førerløse tog og nethandel. For at borgerne kan leve i dette samfund kræves en høj grad af tillid til disse ekspertsystemer.</p>"
+                        "text": "<p>Der er høj grad af individualisering og en næsten fuldstændig aftraditionalisering. Der er kraftig udlejring af sociale relationer.</p><p>Barnet præges af dobbeltsocialisering. Primær socialisering i familien og sekundær socialisering fra institutioner og medier. I familien er barnet unikt – i institutionen er det én blandt mange.</p><p>Institutionerne er udlejrede ekspertsystemer. Ekspertsystemer findes i mange udgaver – fx hospitaler, plejehjem, førerløse tog og nethandel. At leve i dette samfund kræver en høj grad af tillid til ekspertsystemerne.</p>"
                     },
                     "correctColumn": [2]
                 }
@@ -156,6 +172,10 @@
         },
         {
             "heading": "Dominerende personlighedsstyring",
+            "feedback": {
+                "posetive": "I takt med at samfundet aftraditionaliseres og individualiseres, bliver den enkelte mere og mere ansvarlig for egne valg. Friheden er stor, men det stiller også krav til selvværd og selvtillid at administrere de mange valgmuligheder.",
+                "negative": ""
+            },
             "samfundstype": [
                 {
                     "type": "card",
@@ -163,7 +183,7 @@
                         "attr": {"class": "cardWrap cardContent"},
                         "imgSrc": "img/personlighedsstyring1.jpg",
                         "heading": "Traditioner og erfaring ",
-                        "text": "<p>Individet kan betegnes som en &quot;myre&quot;, idet individet ikke er psykologisk adskilt fra gruppen. Ingen adskillelse mellem privat og offentligt. Individet er pligtstyret og man ser sig selv under opsyn fra lokalsamfundet. Samfundet skaber dermed skam.</p>"
+                        "text": "<p>Individet kan betegnes som en &quot;myre&quot;, idet individet ikke er psykologisk adskilt fra gruppen. Der findes ingen klar adskillelse mellem privat og offentligt.</p><p>Individet er pligtstyret og man ser sig selv under opsyn fra lokalsamfundet. Samfundet skaber dermed skam – fx kan en bestemt handling bringe skam over familien.</p><p>Opdragelsen tilpasses lydighed, og man skal kunne klare hårdt fysisk arbejde.</p>"
                     },
                     "correctColumn": [0]
                 },
@@ -173,7 +193,7 @@
                         "attr": {"class": "cardWrap cardContent"},
                         "imgSrc": "img/personlighedsstyring2.jpg",
                         "heading": "Indrestyring",
-                        "text": "<p>Individet kan betegnes som en &quot;snegl&quot;, idet kernefamilien, der nu lever i eget hus eller lejlighed, nu afgrænses til omverdenen. Der opstår en klar adskillelse mellem privat og offentligt. Individet er indefra styret og dermed skabes skyldfølelse, hvis man ikke kan leve op til normerne. Opdragelsen tilpasses rutineprægede jobs. Dermed bliver disciplin og udholdenhed vigtige egenskaber.</p>"
+                        "text": "<p>Individet kan betegnes som en &quot;snegl&quot;, idet kernefamilien, der nu lever i eget hus eller lejlighed, afgrænses til omverdenen. Der opstår en klar adskillelse mellem privat og offentligt. Individet er indefra styret, og dermed skabes skyldfølelse, hvis man ikke kan leve op til normerne.</p><p>Opdragelsen tilpasses rutineprægede jobs. Dermed bliver disciplin og udholdenhed vigtige egenskaber.</p>"
                     },
                     "correctColumn": [1]
                 },
@@ -183,7 +203,7 @@
                         "attr": {"class": "cardWrap cardContent"},
                         "imgSrc": "img/personlighedsstyring3.jpg",
                         "heading": "Ydrestyring og gruppestyring",
-                        "text": "<p>Individet kan betegnes som en &quot;kamæleon&quot;, idet Kernefamiliens rolle er mindre og mange nye familieformer opstår. De mange nye socialiseringsgrupper medfører at individet i højere grad bliver ydrestyret. Identitet skal løbende tilkæmpes og de mange individuelle valg kan skabe angst. Individet kan således både opleve en høj grad af frihed, men også risiko for rodløshed. Kreativitet og selvstændighed er vigtige egenskaber.</p>"
+                        "text": "<p>Individet kan betegnes som en &quot;kamæleon&quot;. Kernefamiliens rolle er mindre, og mange nye familieformer opstår. De mange socialiseringsgrupper – herunder den stigende betydning af de sociale medier -  medfører at individet i højere grad bliver ydrestyret.</p><p>Individet kan både opleve en høj grad af frihed og rodløshed. Identitet skal løbende tilkæmpes og de mange individuelle valg kan skabe angst.</p><p>Opdragelsen tilpasses udvikling af kreativitet og selvstændighed, da arbejdsmarkedet kræver fleksibilitet og samarbejdsevne.</p>"
                     },
                     "correctColumn": [2]
                 }
@@ -191,14 +211,18 @@
         },
         {
             "heading": "Grad af social mobilitet",
+            "feedback": {
+                "posetive": "<p>Der sker over tid en kraftig stigning i den sociale mobilitet. Tidligere var det kun få, der ikke fulgte i forældrenes fodspor. Der sker en gradvis økonomisk velstandsstigning, samt en social og kulturel frisættelse af individet, og dermed bliver det lettere at bryde den sociale arv.</p><p>Dog er der i dag en restgruppe, der har svært ved at komme på eller fastholde sin position på arbejdsmarkedet. Denne restgruppe har typisk en baggrund i ressourcesvage familier.</p>",
+                "negative": ""
+            },
             "samfundstype": [
                 {
                     "type": "card",
                     "card": {
                         "attr": {"class": "cardWrap cardContent"},
                         "imgSrc": "img/mobilitet1.jpg",
-                        "heading": "Lav",
-                        "text": "<p>Lav social mobilitet. Normalt at børnene bliver det samme som forældrene. Samfundet er overvejende statisk, hvorfor den sociale arv sjældent brydes.</p>"
+                        "heading": "Lav social mobilitet ",
+                        "text": "<p>Samfundet er overvejende statisk, hvorfor den sociale arv sjældent brydes. Det er normalt at børnene bliver det samme som forældrene. Sønner følger i fædrenes fodspor og døtrene i mødrenes.</p><p>Familie og slægt bestemmer dermed rammerne for, hvilken social gruppe man hører til. Den enkeltes liv og identitet er dermed lagt ret fast ved fødslen.</p>"
                     },
                     "correctColumn": [0]
                 },
@@ -207,8 +231,8 @@
                     "card": {
                         "attr": {"class": "cardWrap cardContent"},
                         "imgSrc": "img/mobilitet2.jpg",
-                        "heading": "Begrænset",
-                        "text": "<p>Begyndende social mobilitet. Mange unge bliver fortsat indenfor det samme arbejdsområde som forældrene.  Det gradvist forbedrede uddannelsessystem og velfærdssystem giver flere muligheder for at bryde med familiens vaner, traditioner og sociale position.</p><p>Samfundet er blevet mere dynamisk med en begyndende individualisering. Derfor oplever flere en øget social mobilitet.</p>"
+                        "heading": "Begrænset social mobilitet",
+                        "text": "<p>Samfundet er blevet mere dynamisk med en begyndende individualisering. Derfor oplever flere en øget social mobilitet.</p><p>Mange unge bliver fortsat indenfor det samme arbejdsområde som forældrene.  Men det gradvist forbedrede uddannelsessystem og velfærdssystem giver flere muligheder for at bryde med familiens vaner, traditioner og sociale position.</p>"
                     },
                     "correctColumn": [1]
                 },
@@ -217,8 +241,8 @@
                     "card": {
                         "attr": {"class": "cardWrap cardContent"},
                         "imgSrc": "img/mobilitet3.jpg",
-                        "heading": "Betydelig",
-                        "text": "<p>Betydelig social mobilitet. Den høje grad af dynamik, individualisering, aftraditionalisering, refleksivitet samt det udbyggede og gratis uddannelsessystem bevirker, at mange kan bryde den sociale arv og blive noget andet end forældrene.</p><p>Der er en restgruppe, der har svært ved at komme på eller fastholde sin position på arbejdsmarkedet. Denne restgruppe har typisk en baggrund i ressourcesvage familier uden tradition for uddannelse.</p><p>Samfundets fortsatte højere uddannelseskrav medfører at mange oplever stigende præstationskrav.</p>"
+                        "heading": "Betydelig social mobilitet",
+                        "text": "<p>Den høje grad af samfundsdynamik, individualisering, refleksivitet samt det udbyggede og gratis uddannelsessystem bevirker, at mange kan bryde den sociale arv og blive noget andet end forældrene.</p><p>Samfundets høje uddannelseskrav medfører imidlertid, at mange oplever et stigende præstationskrav.</p>"
                     },
                     "correctColumn": [2]
                 }

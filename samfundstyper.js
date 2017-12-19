@@ -1,24 +1,13 @@
 // OPGAVER TIL HJEMMEARBEJDE;
 // ==========================
-// - Sæt objektet på visningssitet
-// + Opret en git til objektet
-// - Inviter TLY, ATO og MIP til git på objektet.
-// + Fix bug ift til counteren og "Tjek svar knappen".
-// - Lav funktionaliteten: "miniCard" ---> "alm card" ved click.
-// - MEGET VIGTIGT: BUGFIX I MOBILE ift fontsize.
-// - Publicer objektet.
+// - MEGET VIGTIGT: BUGFIX I MOBILE ift fontsize: Fix skriftstørrelser i mobilvisning + card-placering (Android: one-plus-two)
 // - Fix kemi-objektet.
-// - Besvar Steen mht fane 4 email.
 
 // OPGAVER DER ER FIXED I BASECAMP:
 // ================================
-// Jeg kan ikke få tæller til at tælle mere end 6 forsøg/fejl...
-// Brug samme style som i Ideologierne, der er det meget tydeligt 
-
-
 
 function draggableCardTypes(cObj) {
-	console.log('\ndraggableCardTypes - CALLED - cObj: ' + JSON.stringify(cObj));
+	console.log('\ndraggableCardTypes - CALLED');
 
     var HTML = '';
     switch (cObj.type) {
@@ -35,7 +24,7 @@ function draggableCardTypes(cObj) {
             HTML += makeCard(cObj);
             break;
         default:
-            console.log('draggableCardTypes - A3');
+            console.log('draggableCardTypes - A3 - cObj.type: ' + JSON.stringify(cObj.type) + ', cObj: ' + JSON.stringify(cObj));
             // alert('ERROR');
     }
 
@@ -44,7 +33,7 @@ function draggableCardTypes(cObj) {
 
 
 function makeTextCard(TcObj) {
-    console.log('\nmakeTextCard - CALLED - TcObj: ' + JSON.stringify(TcObj));
+    console.log('\nmakeTextCard - CALLED');
 
     var cObj = TcObj.card;
 
@@ -58,7 +47,7 @@ function makeTextCard(TcObj) {
 
 
 function makeImgCard(TcObj) {
-    console.log('\nmakeCard - CALLED - TcObj: ' + JSON.stringify(TcObj));
+    console.log('\nmakeImgCard - CALLED');
 
     var cObj = TcObj.card;
 
@@ -74,7 +63,7 @@ function makeImgCard(TcObj) {
 
 
 function makeCard(TcObj) {
-    console.log('\nmakeCard - CALLED - cObj: ' + JSON.stringify(TcObj));
+    console.log('\nmakeCard - CALLED');
 
     var cObj = TcObj.card;
 
@@ -97,7 +86,7 @@ function makeCard(TcObj) {
 
 
 function generateAttrStr(attrObj) {
-    console.log('\ngenerateAttrStr - CALLED - attrObj: ' + JSON.stringify(attrObj));
+    console.log('\ngenerateAttrStr - CALLED');
 
     var HTML = '';
     var keyArr = Object.keys(attrObj);
@@ -115,6 +104,7 @@ function generateAttrStr(attrObj) {
 
 
 function setSortableRow(activeRowId) {
+	console.log('\nsetSortableRow - CALLED');
 	$( "#"+activeRowId ).sortable({ 
 		axis: "x",
 		revert: true,
@@ -144,6 +134,7 @@ function setSortableRow(activeRowId) {
 
 
 function categoryMenu() {
+	console.log('\ncategoryMenu - CALLED');
 	var HTML = '';
 	for (var n in jsonData.category) {
 		HTML += '<div class="menuItem '+((n==0)? 'activeCategory' : 'inactiveCategory')+'"><span class="categoryColor">'+jsonData.category[n].heading+'</span></div>';
@@ -154,6 +145,7 @@ function categoryMenu() {
 
 
 function main() {
+	console.log('\nmain - CALLED');
 	var HTML = '';
 	HTML += '<h1>'+jsonData.heading+'</h1>';
 	HTML += ((jsonData.hasOwnProperty('instruction') && (jsonData.instruction!==''))? instruction(jsonData.instruction) : '');
@@ -180,6 +172,7 @@ function main() {
 
 
 function make_scoreCounter() {
+	console.log('\nmake_scoreCounter - CALLED');
 	var numOfQuestions = jsonData.category.length;
 	// return '<div class="score_container_wrap"><div class="score_container"><span class="scoreText">Korrekte svar: </span><span class="QuestionCounter QuestionTask"><span class="success">0</span> ud af '+numOfQuestions+'</span> <span class="scoreText"> Forsøg: </span><span class="ErrorCount QuestionTask attempt">0</span></div><div class="Clear"></div></div>';
 	return '<div class="score_container_wrap"><div class="score_container"><span class="scoreText">Opgave </span><span class="QuestionCounter QuestionTask"><span class="success">1</span> / '+numOfQuestions+'</span> <span class="scoreText"> Forsøg: </span><span class="ErrorCount QuestionTask attempt">0</span></div><div class="Clear"></div></div>';
@@ -188,7 +181,7 @@ function make_scoreCounter() {
 
 
 function update_scoreCounter(selector) {
-	
+	console.log('\nupdate_scoreCounter - CALLED');
 	var val = parseInt($(selector).text())+1;
 	console.log('update_scoreCounter - val: ' + val);
 
@@ -200,6 +193,7 @@ function update_scoreCounter(selector) {
 
 
 function template1() {
+	console.log('\ntemplate1 - CALLED');
 	var HTML = '';
 	for (var n in jsonData.category) {
 		HTML += '<div id="catRow_'+n+'" class="catRow '+((n==0)? 'active' : '')+'">';
@@ -216,7 +210,7 @@ function template1() {
 
 // $('#interface').append(makeTable(['a', 'b', 'c'], [['(0,0)','(0,1)','(0,2)'], ['(1,0)','(1,1)','(1,2)'],['(2,0)','(2,1)','(2,2)'],['(3,0)','(3,1)','(3,2)']]));
 function template2() {
-
+	console.log('\ntemplate2 - CALLED');
 	window.template2_called = true;
 
 	console.log('template2 - jsonData: ' + JSON.stringify(jsonData, null, 4));
@@ -257,7 +251,7 @@ function template2() {
 
 
 function makeTable(attrObj, headerArr, contentArr) {
-	console.log('makeTable - contentArr: ' + JSON.stringify(contentArr));
+	console.log('\nmakeTable - CALLED');
 	var HTML = '';
 	HTML += '<table '+generateAttrStr(attrObj)+'>';
 	HTML += 	'<thead>';
@@ -287,10 +281,12 @@ function makeTable(attrObj, headerArr, contentArr) {
 
 
 function makeMiniCard(TcObj) {
-    console.log('\nmakeMiniCard - CALLED - cObj: ' + JSON.stringify(TcObj));
+    console.log('\nmakeMiniCard - CALLED');
 
     var cObj = TcObj.card;
 
+
+    // cObj.attr.class += ((!elementInArray(cObj.attr.class.split(' '), 'miniCard'))?' miniCard' : '');
     cObj.attr.class += ' miniCard';
 
     var HTML = '';
@@ -313,6 +309,7 @@ function makeMiniCard(TcObj) {
 
 
 function setHeight(selectorArr, ratio) {
+	console.log('\nsetHeight - CALLED');
 	var width;
 	for (var n in selectorArr) {
 		width = $(selectorArr[n]).width();
@@ -323,7 +320,7 @@ function setHeight(selectorArr, ratio) {
 
 // setHeight2(['.samfundstypeZone', '.catRow .cardContent']);
 function setHeight2(selectorArr) {
-	console.log('setHeight2 - CALLED - selectorArr[0]: ' + selectorArr[0] + ', $(selectorArr[0]).length: ' + $(selectorArr[0]).length);
+	console.log('\nsetHeight2 - CALLED');
 
 	// if ($(selectorArr[0]).length > 0) { // Only if the first element is present, then setHeight2...
 	if ((typeof(template2_called)==='undefined')) {
@@ -381,6 +378,8 @@ function setHeight2(selectorArr) {
 
 
 function checkAnswer() {
+	console.log('\ncheckAnswer - CALLED');
+
 	var id = $('.active').attr('id').replace('catRow_','');
 	console.log('checkAnswer - id: ' + id);
 
@@ -404,6 +403,8 @@ function checkAnswer() {
 
 
 function setCardPosition() {
+	console.log('\nsetCardPosition - CALLED');
+
 	var Cindex = $('.active').index()-1;
 	console.log('setCardPosition - Cindex: ' + Cindex);
 	$(".active .cardContent" ).each(function( index, element ) {
@@ -424,6 +425,8 @@ function setCardPosition() {
 
 
 function ShuffelArray(ItemArray){
+	console.log('\nShuffelArray - CALLED');
+
     var NumOfItems = ItemArray.length;
     var NewArray = ItemArray.slice();  // Copy the array...
     var Item2; var TempItem1; var TempItem2;
@@ -439,9 +442,9 @@ function ShuffelArray(ItemArray){
 
 
 function elementInArray (tArray, element){
-	console.log('\nelementInArray - CALLED - tArray: ' + JSON.stringify(tArray) + ', element: _' + element + '_');
+	console.log('\nelementInArray - CALLED');
     for (x in tArray){
-        if (tArray[x] == element) return true;
+        if (tArray[x] == element) {return true};
     }
     return false;
 }
@@ -450,29 +453,45 @@ function elementInArray (tArray, element){
 // correct position, then it 
 function randomizeCards() {
 	console.log('\nrandomizeCards - CALLED');
-	// var n = 0;
-	for (var n in jsonData.category) {
-		console.log('randomizeCards - randArr 1: ' + JSON.stringify(jsonData.category[n].samfundstype, null, 4));
+
+	// SIMPLE RANDOMIZE: 
+	// Just randomized cards... The right permutation of cards is possible...
+	// =======================================
+	// for (var n in jsonData.category) {  
+	// 	var randArr = ShuffelArray(jsonData.category[n].samfundstype);
+	// 	jsonData.category[n].samfundstype = randArr;
+	// }
+
+	// ADVANCED RANDOMIZE: 
+	// The teachers (FR) does not want the right permutation of cards to be possible. Therefor this algorithm randomizes all cards, and 
+	// checks to see if the first card is supposed to go in the first position - if it is, then the algorithm iterate through all cards to find 
+	// a cards that does NOT go in the first position: it then place this card in the first position.  
+	// =======================================
+	for (var n in jsonData.category) {  
 		var randArr = ShuffelArray(jsonData.category[n].samfundstype);
-		console.log('randomizeCards - randArr 2: ' + JSON.stringify(randArr, null, 4));
-// var randArr = jsonData.category[n].samfundstype;
-		if (elementInArray(randArr[0].correctColumn), 0) {
+		console.log('randomizeCards - n: ' + n);
+		if (elementInArray(randArr[0].correctColumn, 0)) {
+			console.log('randomizeCards - n: ' + n + ' randArr 1: ' + JSON.stringify(randArr));
 			var len = randArr.length;
 			for (var i = 0; i < len; i++) {
-				if (!elementInArray(randArr[0].correctColumn), i) {
-					var firstElement = randArr.shift();
-					randArr.splice(((i==0)?0:i-1), 0, firstElement);
+				if (!elementInArray(randArr[i].correctColumn, 0)) {
+					console.log('randomizeCards - i: ' + i + ', ' + JSON.stringify(randArr[i].correctColumn));
+					var elem = randArr.splice(i, 1)[0];
+					randArr.unshift(elem);
+					break;
 				} 
 			}
+			console.log('randomizeCards - n: ' + n + ' - randArr 2: ' + JSON.stringify(randArr));
 		}
-		console.log('randomizeCards - randArr 3: ' + JSON.stringify(randArr, null, 4));
-
-		jsonData.category[n].samfundstype = randArr;
+		jsonData.category[n].samfundstype = randArr;						
 	}
+
+	console.log('randomizeCards - jsonData 2: ' + JSON.stringify(jsonData));
 }
 
 
 function addCardId() {
+	console.log('\naddCardId - CALLED');
 	for (var n in jsonData.category) {
 		for (var k in jsonData.category[n].samfundstype) {
 			jsonData.category[n].samfundstype[k].cardId = k;
@@ -484,7 +503,7 @@ function addCardId() {
 
 
 $(document).on('click touchend', "#checkAnswer", function(event) {
-	console.log('checkAnswer - CLICKED');
+	console.log('\ncheckAnswer - CLICKED');
 	var ans = checkAnswer();
 	if (ans) {
 		console.log('checkAnswer - A0');
@@ -493,7 +512,7 @@ $(document).on('click touchend', "#checkAnswer", function(event) {
 		var currentQuestion = $('.active').index();
 		console.log('checkAnswer - currentQuestion: ' + currentQuestion + ', numOfQuestions: ' + numOfQuestions);
 		if (currentQuestion < numOfQuestions) {
-			var userMsgBox_msg = '<div class="microhint_label_success">Korrekt</div> Du er klar til næste spørgsmål. Tryk på &quot;Gå videre&quot;';
+			var userMsgBox_msg = '<div class="microhint_label_success">Korrekt</div> '+jsonData.category[currentQuestion].feedback.posetive+'';
 			$('#checkAnswer').html('Gå videre').attr('id', 'changeQuestion');
 		} else {
 			var userMsgBox_msg = '<div class="microhint_label_success">FLOT</div> Du har besvaret alle spørgsmål. Du kan nu gå til oversigten over samfundstyper.';
@@ -526,7 +545,7 @@ $(document).on('click touchend', "#checkAnswer", function(event) {
 
 
 $(document).on('click touchend', "#changeQuestion", function(event) {
-	console.log('changeQuestion - CLICKED');
+	console.log('\nchangeQuestion - CLICKED');
 
 	// $( ".active" ).sortable( "enable" );  // Denne er ikke nødvendig pga reinitialisering.
 
@@ -544,6 +563,8 @@ $(document).on('click touchend', "#changeQuestion", function(event) {
 
 
 function checkAnswer_callBack() {
+	console.log('\ncheckAnswer_callBack - CLICKED');
+
 	var numOfQuestions = jsonData.category.length;
 	var currentQuestion = $('.active').index();
 	console.log('checkAnswer - currentQuestion: ' + currentQuestion + ', numOfQuestions: ' + numOfQuestions);
@@ -591,47 +612,56 @@ function checkAnswer_callBack() {
 		// alert('checkAnswer - TEMPLATE 2');
 		// $('#interface').append(template2());
 		$('#innerWrap').html(template2());
+
+		microhint($('.miniCard:eq(0)'), 'Klik på kortene for at læse mere.', false, '#000'); 	
 	}
 }
 
 
 
 function UserMsgBox_card(TargetSelector, UserMsg) {
-    console.log("bring up the box!");
-
-    var HTML = "<div class = 'MsgBox_bgr_card'><div id='UserMsgBox_card'>";
+    console.log('\nUserMsgBox_card - CALLED');
+    var HTML = "<div class='MsgBox_bgr_card'><div id='UserMsgBox_card'>";
     HTML += '<span class="CloseClass_card right glyphicon glyphicon-remove"></span><span class="clear"></span>';
     HTML += UserMsg;
     HTML += "</div> </div>";
-    // $ <--------------------------------------------   UDKOMMENTERET AF THAN 03-02-2017
+    
     $(TargetSelector).prepend(HTML);
 
     $(".MsgBox_bgr_card").fadeIn("slow");
-
-    $(".MsgBox_bgr_card").click(function() {
-        $(".MsgBox_bgr_card").fadeOut(200, function() {
-            $(this).remove();
-        });
-    });
-    $("#UserMsgBox_card").click(function() {
-        $(".MsgBox_bgr_card").fadeOut(200, function() {
-            $(this).remove();
-        });
-       //  $('.CloseClass_card').trigger('click');
-    });
-    $(document).keyup(function(e) {
-        if (e.keyCode == 27) { // escape key maps to keycode `27`
-            $(".MsgBox_bgr_card").fadeOut(200, function() {
-                $(this).remove();
-            });
-        }
-    });
 }
 
+// $(".MsgBox_bgr_card").click(function() {
+// $(document).on('click touchend', '.MsgBox_bgr_card', function(event) {
+$(document).on('click', '.MsgBox_bgr_card', function(event) {
+	console.log('UserMsgBox_card - .MsgBox_bgr_card - CLICKED');
+    $(".MsgBox_bgr_card").fadeOut(200, function() {
+        $(this).remove();
+    });
+});
+// $("#UserMsgBox_card").click(function() {
+// $(document).on('click touchend', '#UserMsgBox_card', function(event) {
+$(document).on('click', '#UserMsgBox_card', function(event) {
+	console.log('UserMsgBox_card - #UserMsgBox_card - CLICKED');
+    $(".MsgBox_bgr_card").fadeOut(200, function() {
+        $(this).remove();
+    });
+   //  $('.CloseClass_card').trigger('click');
+});
+$(document).keyup(function(e) {
+	console.log('UserMsgBox_card - ESC - CLICKED');
+    if (e.keyCode == 27) { // escape key maps to keycode `27`
+        $(".MsgBox_bgr_card").fadeOut(200, function() {
+            $(this).remove();
+        });
+    }
+});
 
 
-$(document).on('click touchend', '.miniCard', function(event) {
 
+// $(document).on('click touchend', '.miniCard', function(event) {  //  <--- BUG!!!
+$(document).on('click', '.miniCard', function(event) {				//  <--- BUGFIX: "touchend" must not be on '.miniCard' to open the large "miniCard_large"!
+	console.log('\nminiCard > UserMsgBox_card - CALLED');
 	
 	//##############################################################################
 	//		UserMsgBox løsning, som virker uanset card-tekst-størrelse...
@@ -647,10 +677,10 @@ $(document).on('click touchend', '.miniCard', function(event) {
 
 
 	UserMsgBox_card("body", '<div id="dummyContainer"></div>');
-	$('#UserMsgBox_card').hide().fadeIn(400);
+	// $('#UserMsgBox_card').hide().fadeIn(400);
 	$('#dummyContainer').html($(this).clone().addClass('miniCard_large').removeClass('miniCard'));
 	$('#UserMsgBox_card .miniCardText').css({display: 'inline-block'});
-
+	$('.microhint').trigger('click');
 
 });
 
@@ -908,13 +938,16 @@ $(window).resize(function() {
 
 $(document).ready(function() {
 
+	rotateCheck();
+
 	addCardId();
 
 	randomizeCards();
 
 	$('#interface').html(main());
 
-	$('#catRow_0').addClass('microhint_target');  // Insert 
+	// $('#catRow_0').addClass('microhint_target');  // Insert 
+	$('#catRow_0 .cardContent:eq(1) h4').addClass('microhint_target');  // Insert 
 	microhint($('.microhint_target'), '<img class="img-responsive" src="img/sorterhint_animatedGIF_done.gif"> <p id="startHint">Sorter de grå kort, så de passer til den rette kategori.</p>', false, '#000'); 
 
 	setSortableRow('catRow_0');
