@@ -317,7 +317,8 @@ function setHeight(selectorArr, ratio) {
 	}
 }
 
-
+// catRow active
+// samfundstypeZone
 // setHeight2(['.samfundstypeZone', '.catRow .cardContent']);
 function setHeight2(selectorArr) {
 	console.log('\nsetHeight2 - CALLED');
@@ -338,6 +339,7 @@ function setHeight2(selectorArr) {
 
 				console.log('setHeight2 - LOADED');
 
+				$(".active .cardContent" ).removeAttr('style');
 			    var maxHeight = 0;  // '.catRow .cardContent'
 			    $(".active .cardContent" ).each(function( index, element ) {
 			    // $('.catRow .cardContent' ).each(function( index, element ) {
@@ -353,6 +355,12 @@ function setHeight2(selectorArr) {
 			    var w = $(".active .cardContent" ).width();
 			    $(".active .cardContent" ).height(maxHeight + w*ratio);
 			    $(".samfundstypeZone" ).height(maxHeight + w*ratio + 50);
+
+
+			    var top = $(".samfundstypeZone" ).position();
+			    console.log('setHeight2 - top: ' + top.top);
+			    $('.active').css({'position':'absolute', 'top': String(top.top + 15)+'px'});
+			    // $('.active').css({'position':'absolute', 'top': '0px'});
 
 			    // $(".active .cardContent" ).css({'min-height': maxHeight + w*ratio});   // BUGFIX: En mere flexibel løsning end den foroven.
 			    // $(".samfundstypeZone" ).css({'min-height': maxHeight + w*ratio + 50}); // BUGFIX: En mere flexibel løsning end den foroven.
@@ -560,6 +568,10 @@ $(document).on('click touchend', "#changeQuestion", function(event) {
 	$('.microhint').trigger('click');
 
 });
+
+// $( document ).on( "mousemove", function( event ) {
+//   $( "#log" ).text( "pageX: " + event.pageX + ", pageY: " + event.pageY );
+// });
 
 
 function checkAnswer_callBack() {
@@ -970,4 +982,6 @@ $(document).ready(function() {
 	// TEST AF template2():
 	// ====================
 	// $('#innerWrap').html(template2());  // <--------- Husk at aktivere samfundstyper_test3.json ved test!
+
+	// $('#interface').after('<div id="log"></div>');
 });

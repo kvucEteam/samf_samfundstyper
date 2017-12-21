@@ -1,6 +1,7 @@
 
 #samfundstypeBgrWrap {
-	position: absolute;
+	/*position: absolute;*/ /* <----- Udkommenteret ift responsive tilføjelser d. 21/12-2017 */
+	position: relative;     /* <----- Tilføjet ift responsive tilføjelser d. 21/12-2017 */
 	top: 0px;
 	/*left: -2px;*/
 }
@@ -18,9 +19,10 @@
 
 .catRow{
 	display: none;
-	position: relative;
+	/*position: relative;*/  /* <----- Udkommenteret ift responsive tilføjelser d. 21/12-2017 */
+	position: absolute;     /* <----- Tilføjet ift responsive tilføjelser d. 21/12-2017 */
 	top: 0px;
-	padding-top: 2.5%;  /* <----- BUGFIX: Virker i Firefox */
+	/*padding-top: 12%;*/  /* <----- BUGFIX: Virker i Firefox */
 }
 
 .active {
@@ -33,7 +35,7 @@
 	display: inline-block;
 	/*width: 75%;*/
 	width: 80%;
-	padding-top: 60px;
+	/*padding-top: 60px;*/
 }
 
 .cardContent {
@@ -126,7 +128,8 @@
 
 #btnWrap {
 	/*margin-top: 30px;*/
-	margin-top: 15px;
+	margin-top: 15 
+	+      ululijhhjhhhhh    px;
 	margin-left: 0.6%;
 }
 
