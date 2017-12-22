@@ -510,7 +510,8 @@ function addCardId() {
 }
 
 
-$(document).on('click touchend', "#checkAnswer", function(event) {
+// $(document).on('click touchend', "#checkAnswer", function(event) {
+$(document).on('click', "#checkAnswer", function(event) {
 	console.log('\ncheckAnswer - CLICKED');
 	var ans = checkAnswer();
 	if (ans) {
@@ -542,7 +543,7 @@ $(document).on('click touchend', "#checkAnswer", function(event) {
 	} else {
 		console.log('checkAnswer - A3');
 
-		microhint($('#checkAnswer'), '<div class="microhint_label_danger">Forkert</div> Prøv igen.', false, '#000');
+		microhint($('#checkAnswer'), '<div class="microhint_label_danger">Forkert</div> Sorter kortene og prøv igen.', false, '#000');
 		$('.success_inactive').addClass('success').removeClass('success_inactive');
 		$('.attempt_inactive').addClass('attempt').removeClass('attempt_inactive');
 
@@ -552,7 +553,8 @@ $(document).on('click touchend', "#checkAnswer", function(event) {
 });
 
 
-$(document).on('click touchend', "#changeQuestion", function(event) {
+// $(document).on('click touchend', "#changeQuestion", function(event) {
+$(document).on('click', "#changeQuestion", function(event) {
 	console.log('\nchangeQuestion - CLICKED');
 
 	// $( ".active" ).sortable( "enable" );  // Denne er ikke nødvendig pga reinitialisering.
