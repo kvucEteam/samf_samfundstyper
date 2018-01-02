@@ -148,7 +148,8 @@ function main() {
 	console.log('\nmain - CALLED');
 	var HTML = '';
 	HTML += '<h1>'+jsonData.heading+'</h1>';
-	HTML += ((jsonData.hasOwnProperty('instruction') && (jsonData.instruction!==''))? instruction(jsonData.instruction) : '');
+	// HTML += ((jsonData.hasOwnProperty('instruction') && (jsonData.instruction!==''))? instruction(jsonData.instruction) : '');
+	HTML += (jsonData.hasOwnProperty('instruction') && (jsonData.instruction!==''))? instruction_noLines(jsonData.instruction) : '';
 	HTML += ((jsonData.hasOwnProperty('explanation') && (jsonData.explanation!==''))? explanation(jsonData.explanation) : '');
 	HTML += '<div class="Clear"></div>';
 	HTML += '<div id="innerWrap">';
