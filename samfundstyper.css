@@ -261,6 +261,33 @@ table#template2_tableView{
 }
 
 
+.rowHeading {
+	width: 20%;
+	/*width: 20%;*/
+    vertical-align: top;
+    font-weight: 700;
+}
+
+.rowContent {
+	/*max-width: 30%;*/
+	width: 26%;
+    margin: 0.3%;
+    vertical-align: top;
+}
+
+.tblElement {
+	display: inline-block;
+}
+
+.tblHeading{
+	width: 25%;
+}
+
+.tblRow {
+		
+}
+
+
 /*******************************************************************************
 						Media queries
 *******************************************************************************/

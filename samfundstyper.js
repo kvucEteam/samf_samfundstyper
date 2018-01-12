@@ -245,7 +245,11 @@ function template2() {
 		contentArr.push(subArr);
 	}
 
-	var HTML = makeTable({id:'template2_tableView'}, headerArr, contentArr);
+	var HTML = '';
+
+	// HTML += makeTable({id:'template2_tableView'}, headerArr, contentArr);
+
+	HTML += makeDivTable({id:'template2_tableView_div'}, headerArr, contentArr);
 
 	return HTML;
 }
@@ -261,21 +265,51 @@ function makeTable(attrObj, headerArr, contentArr) {
 	HTML += 			'<th><h4>'+headerArr[n]+'</h4></th>';
 					}
 	HTML += 		'</tr>';
-	HTML += 	'<thead>';
+	HTML += 	'</thead>';
 	HTML += 	'<tbody>';
 					for (var n in contentArr) {
 	HTML += 			'<tr>';
 						for (var k in contentArr[n]) {
 							if (k == 0) {
 								HTML += '<td>'+contentArr[n][k]+'</td>';
+								// HTML += '<td class="rowHeading">'+contentArr[n][k]+'</td>';
 							} else {
 								HTML += '<td>'+makeMiniCard(contentArr[n][k])+'</td>';
+								// HTML += '<td class="rowContent">'+makeMiniCard(contentArr[n][k])+'</td>';
 							}
 						}
 	HTML += 			'</tr>';
 					}
-	HTML += 	'<tbody>';
+	HTML += 	'</tbody>';
 	HTML += '</table>';
+
+	return HTML;
+}
+
+
+function makeDivTable(attrObj, headerArr, contentArr) {
+	console.log('\nmakeDivTable - CALLED');
+	var HTML = '';
+	HTML += '<div '+generateAttrStr(attrObj)+'>';
+	HTML += 	'<div class="tblRow">';
+					for (var n in headerArr) {
+	HTML += 			'<div class="tblHeading tblElement"><h4>'+headerArr[n]+'</h4></div>';
+					}
+	HTML += 	'</div>';
+				for (var n in contentArr) {
+	HTML += 		'<div class="tblRow">';
+					for (var k in contentArr[n]) {
+						if (k == 0) {
+							HTML += '<div class="rowHeading tblElement">'+contentArr[n][k]+'</div>';
+						} else {
+							HTML += '<div class="rowContent tblElement">'+makeMiniCard(contentArr[n][k])+'</div>';
+						}
+					}
+	HTML += 		'</div>';
+				}
+	HTML += '</div>';
+
+	console.log('makeDivTable - HTML: ' + HTML);
 
 	return HTML;
 }
@@ -299,7 +333,7 @@ function makeMiniCard(TcObj) {
     // HTML += 		((cObj.hasOwnProperty('heading')) ? '<h4>(P: ' + TcObj.cardPosition +'), (A:[' + TcObj.correctColumn + '])' + cObj.heading + '</h4>' : ''); // <----- TEST 
     HTML += 		((cObj.hasOwnProperty('heading')) ? '<h4>' + cObj.heading + '</h4>' : '');  																// <----- LIVE
     // HTML += 		((cObj.hasOwnProperty('text')) ? '<p>' + cObj.text + '</p>' : '');
-    HTML += 		((cObj.hasOwnProperty('text')) ? '<div class="miniCardText">' + cObj.text + '<div>' : '');
+    HTML += 		((cObj.hasOwnProperty('text')) ? '<div class="miniCardText">' + cObj.text + '</div>' : '');
     // HTML += 		((cObj.hasOwnProperty('btnText')) ? '<span class="btn_ghost btn_ghost_noStyle btn btn-primary">' + cObj.btnText + '</span>' : '');
     HTML += 		'<div class="Clear"></div>';
     HTML += 	'</div>';
