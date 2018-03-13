@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Samfundstyper</title>
+    <!-- http://www.robotstxt.org/meta.html -->
+    <meta name="robots" content="noindex, nofollow" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../library/css/styles.css" type="text/css" />
+    <link rel="stylesheet" href="samfundstyper.css" type="text/css" />
+    <link rel="stylesheet" href="samfundstyper_2.css" type="text/css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+</head>
+
+<body>
+    <div class="container-fluid">
+        
+        <div id="interface"></div>
+
+    </div>
+    <script src="../library/vendor_scripts.js"></script>
+    <script src="../library/custom_scripts.js"></script>
+    <!-- <script type="text/javascript" src="//cdn.rawgit.com/egorshar/jquery-ui-sortable-animation/master/jquery.ui.sortable-animation.js"></script> -->
+    <script src="samfundstyper.js"></script>
+    <script type="text/javascript">
+        getAjaxData("GET", "json/samfundstyper.json", false, "json");        // Live data
+        // getAjaxData("GET", "json/samfundstyper_test1.json", false, "json");     // Testdata
+        // getAjaxData("GET", "json/samfundstyper_test2.json", false, "json");     // Testdata
+        // getAjaxData("GET", "json/samfundstyper_test3.json", false, "json");     // Testdata til template 2
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            one_line_footer();
+        });
+    </script>
+</body>
+
+</html>

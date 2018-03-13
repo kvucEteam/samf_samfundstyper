@@ -251,7 +251,10 @@ function template2() {
 
 	HTML += makeDivTable({id:'template2_tableView_div'}, headerArr, contentArr);
 
+
 	return HTML;
+
+
 }
 
 
@@ -312,6 +315,8 @@ function makeDivTable(attrObj, headerArr, contentArr) {
 	console.log('makeDivTable - HTML: ' + HTML);
 
 	return HTML;
+
+
 }
 
 
@@ -340,6 +345,8 @@ function makeMiniCard(TcObj) {
     HTML += '</div>';
 
     return HTML;
+
+
 }
 
 
@@ -662,7 +669,18 @@ function checkAnswer_callBack() {
 		// $('#interface').append(template2());
 		$('#innerWrap').html(template2());
 
-		microhint($('.miniCard:eq(0)'), 'Klik på kortene for at læse mere.', false, '#000'); 	
+		
+/**
+ *
+ * Linje der resetter css'en - tilføjet ATO  
+ *
+ */
+
+$(".imgContainer").css("opacity", "1").css("height", "initial");
+		
+
+
+		microhint($('.miniCard:eq(0)'), 'Klik på kortene for at læse mere.', false, '#000'); 
 	}
 }
 
