@@ -676,7 +676,7 @@ function checkAnswer_callBack() {
  *
  */
 
-$(".imgContainer").css("opacity", "1").css("height", "initial");
+$(".imgContainer").css("opacity", "1").css("height", "auto");
 		
 
 
