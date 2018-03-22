@@ -619,7 +619,7 @@ $(document).on('click', "#changeQuestion", function(event) {
 
 
 function checkAnswer_callBack() {
-	console.log('\ncheckAnswer_callBack - CLICKED'); 
+	console.log('\ncheckAnswer_callBack - CLICKED');
 
 	var numOfQuestions = jsonData.category.length;
 	var currentQuestion = $('.active').index();
@@ -665,7 +665,7 @@ function checkAnswer_callBack() {
 	} else {
 		console.log('checkAnswer - A2');
 
-		osc.save('jsonData_samf_samfundstyper_1', jsonData);
+		osc.save('jsonData_samf_samfundstyper_2', jsonData);
 
 		// alert('checkAnswer - TEMPLATE 2');
 		// $('#interface').append(template2());
@@ -678,7 +678,7 @@ function checkAnswer_callBack() {
  *
  */
 
-$(".imgContainer").css("opacity", "1").css("height", "auto");
+$(".imgContainer").css("opacity", "1").css("height", "initial");
 		
 
 
@@ -1003,7 +1003,7 @@ function returnLastStudentSession() {
 	osc.exist('jsonData');
 
 	// var TjsonData = osc.load('jsonData');
-	var TjsonData = osc.load('jsonData_samf_samfundstyper_1');
+	var TjsonData = osc.load('jsonData_samf_samfundstyper_2');
 	console.log('returnLastStudentSession - TjsonData: ' + JSON.stringify(TjsonData));
 	
 	if ((TjsonData !== null) && (typeof(TjsonData) !== 'undefined')){
