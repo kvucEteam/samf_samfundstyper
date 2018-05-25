@@ -216,6 +216,8 @@ function template2() {
 
 	console.log('template2 - jsonData: ' + JSON.stringify(jsonData, null, 4));
 
+	$('.instructionText').append('<br><span class="download btn btn-info btn-sm"><span class="glyphicons glyphicons-download-alt"></span> Hent en PDF-oversigt over samfundstyperne </span>');
+
 	// var headerArr = ['a', 'b', 'c'];
 	// var contentArr = [['(0,0)','(0,1)','(0,2)'], ['(1,0)','(1,1)','(1,2)'],['(2,0)','(2,1)','(2,2)'],['(3,0)','(3,1)','(3,2)']];
 	var headerArr = [''];
@@ -1123,4 +1125,6 @@ $(document).ready(function() {
 	// $('#innerWrap').html(template2());  // <--------- Husk at aktivere samfundstyper_test3.json ved test!
 
 	// $('#interface').after('<div id="log"></div>');
+
+	// <span class='download btn btn-info btn-sm'>Hent en PDF-oversigt over samfundstyperne <span class="glyphicons glyphicons-download-alt"></span> </span>
 });
