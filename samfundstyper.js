@@ -216,7 +216,7 @@ function template2() {
 
 	console.log('template2 - jsonData: ' + JSON.stringify(jsonData, null, 4));
 
-	$('.instructionText').append('<br><span class="download btn btn-info btn-sm"><span class="glyphicons glyphicons-download-alt"></span> Hent en PDF-oversigt over samfundstyperne </span>');
+	$('.instructionText').append('<br><a class="download btn btn-info btn-sm" href="pdf/pdf_oversigt_samfundstyperne.pdf" target="_blank"><span class="glyphicons glyphicons-download-alt"></span> Hent en PDF-oversigt over samfundstyperne </a>');
 
 	// var headerArr = ['a', 'b', 'c'];
 	// var contentArr = [['(0,0)','(0,1)','(0,2)'], ['(1,0)','(1,1)','(1,2)'],['(2,0)','(2,1)','(2,2)'],['(3,0)','(3,1)','(3,2)']];
@@ -1032,7 +1032,18 @@ function returnLastStudentSession() {
 	        // jsonData = TjsonData;
 	        // initQuiz();
 
-	        $('#interface').html('<div id="innerWrap"></div>');
+	        // $('#interface').html('<div id="innerWrap"></div>');  // COMMENTED OUT 25/5-2018
+	        var HTML = '';											// ADDED 25/5-2018
+	        HTML += '<h1>'+jsonData.heading+'</h1>';
+			HTML += (jsonData.hasOwnProperty('instruction') && (jsonData.instruction!==''))? instruction_noLines(jsonData.instruction) : '';
+			HTML += ((jsonData.hasOwnProperty('explanation') && (jsonData.explanation!==''))? explanation(jsonData.explanation) : '');
+			HTML += '<div class="Clear"></div>';
+			HTML += '<div id="innerWrap">';
+			HTML += '</div>';
+			$('#interface').html(HTML);
+
+			// $('.instructionText').append('<br><span class="download btn btn-info btn-sm"><span class="glyphicons glyphicons-download-alt"></span> Hent en PDF-oversigt over samfundstyperne </span>');
+
 	        setTimeout(function(){ 
 	        	jsonData = TjsonData;
 	        	$('#innerWrap').html(template2());
@@ -1083,6 +1094,12 @@ $(window).resize(function() {
 	// setHeight(['.samfundstypeZone', '.catRow .cardContent'], 1.5);
 	setHeight2(['.samfundstypeZone', '.catRow .cardContent']);
 });
+
+
+
+// $(document).on('click touchend', ".download", function(event) {
+
+// });
 
 
 $(document).ready(function() {
