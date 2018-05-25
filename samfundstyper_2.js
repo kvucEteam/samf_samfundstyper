@@ -1075,7 +1075,7 @@ function initQuiz() {
 
 	addCardId();
 
-	// randomizeCards();
+	randomizeCards();
 
 	$('#interface').html(main());
 
